@@ -1,0 +1,13 @@
+<div class="shoeWrap">
+    <h1>Welcome to GetSet,Ready,Go</h1>
+    {{#each shoes}}
+    <div class="shoe-item">
+        <h2>{{brand}}</h2>
+        <span>Size: {{size}}</span>
+        <span>Colour: {{colour}}</span>
+        <span>Price: R{{price}}</span>
+        <span>{{#if in_stock}}In Stock{{else}}Out of Stock{{/if}}</span>
+        <img src="{{image_url}}" alt="{{brand}} Shoe">
+    </div>
+    {{/each}}
+</div>
