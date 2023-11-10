@@ -1,0 +1,31 @@
+INSERT INTO shoes (name, brandname, size, color, price, in_stock, image_url)
+VALUES
+  ('4D FWD 4', 'Adidas', 7, 'white', 3999.99, 10, 'https://images.prodirectsport.com/ProductImages/Thumbs/4066766622937_3_1437619.jpg?impolicy=thumb&imwidth=356'),
+  ('adizero SL', 'Adidas', 9, 'orange', 2575.00, 15, 'https://images.prodirectsport.com/ProductImages/Thumbs/273568_Thumb_1357318.jpg?impolicy=thumb&imwidth=356'),
+  ('Terrex Soulstride', 'Adidas', 10, 'red', 1899.00, 20, 'https://images.prodirectsport.com/ProductImages/Thumbs/1001186_Thumb_1660405.jpg?impolicy=thumb&imwidth=356'),
+  /*Nike shoes*/
+  ('Terra Kiger 9', 'Nike', 7, 'red', 6999.99, 10, 'https://images.prodirectsport.com/ProductImages/Thumbs/286000_Thumb_1413546.jpg?impolicy=thumb&imwidth=356'),
+  ('AIR ZOOM PEGASUS 39', 'Nike', 8, 'white', 3875.00, 15, 'https://images.prodirectsport.com/ProductImages/Thumbs/263992_thumb_1110987.jpg?impolicy=thumb&imwidth=356'),
+  ('ZoomX Vaporfly Next Percent 2', 'Nike', 10, 'green', 5999.00, 15, 'https://images.prodirectsport.com/ProductImages/Thumbs/263983_Thumb_1138374.jpg?impolicy=thumb&imwidth=356'),
+  ('React Infinity Run Flyknit 3', 'Nike', 11, 'black', 1399.00, 20, 'https://images.prodirectsport.com/ProductImages/Thumbs/252482_Thumb_1100641.jpg?impolicy=thumb&imwidth=356'),
+    /*Hoka shoes*/
+  ('Speedgoat 5 Wide', 'Hoka', 6, 'red', 6999.99, 12, 'https://images.prodirectsport.com/ProductImages/Thumbs/261074_Thumb_1308094.jpg?impolicy=thumb&imwidth=356'),
+  ('Bondi 8', 'Hoka', 12, 'black', 2875.00, 15, 'https://images.prodirectsport.com/ProductImages/Thumbs/261024_Thumb_1674367.jpg?impolicy=thumb&imwidth=356'),
+  ('Carbon X 3', 'Hoka', 10, 'yellow', 1999.00, 5, 'https://images.prodirectsport.com/ProductImages/Thumbs/261055_Thumb_1674781.jpg?impolicy=thumb&imwidth=356'),
+  ('Torrent 2', 'Hoka', 11, 'blue', 2399.00, 8, 'https://images.prodirectsport.com/ProductImages/Thumbs/261058_Thumb_1685168.jpg?impolicy=thumb&imwidth=356'),
+    /*Under Armour shoes*/
+  ('HOVR Machina 3', 'Under Armour', 6, 'red', 2999.99, 10, 'https://images.prodirectsport.com/ProductImages/Thumbs/263445_Thumb_1211452.jpg?impolicy=thumb&imwidth=356'),
+  ('HOVR Infinite 4', 'Under Armour', 8, 'orange', 4875.00, 15, 'https://images.prodirectsport.com/ProductImages/Thumbs/263443_Thumb_1266442.jpg?impolicy=thumb&imwidth=356'),
+  ('FLOW Velociti Elite', 'Under Armour', 10, 'green', 5999.00, 15, 'https://images.prodirectsport.com/ProductImages/Thumbs/274906_Thumb_1376930.jpg?impolicy=thumb&imwidth=356'),
+  ('HOVR Machina', 'Under Armour', 11, 'white', 2399.00, 20, 'https://images.prodirectsport.com/ProductImages/Thumbs/274878_Thumb_1362404.jpg?impolicy=thumb&imwidth=356'),
+    /*inov-8 shoes*/
+  ('TrailFly™ G 270 V2', 'inov-8', 7, 'grey', 6599.99, 10, 'https://images.prodirectsport.com/ProductImages/Thumbs/260864_Thumb_1691543.jpg?impolicy=thumb&imwidth=356'),
+  ('Terraultra™ G 270', 'inov-8', 8, 'white', 7875.00, 15, 'https://images.prodirectsport.com/ProductImages/Thumbs/240285_Thumb_0866694.jpg?impolicy=thumb&imwidth=356'),
+  ('X-Talon™ Ultra 260 V2', 'inov-8', 10, 'orange', 6999.00, 15, 'https://images.prodirectsport.com/ProductImages/Thumbs/241622_Thumb_1018222.jpg?impolicy=thumb&imwidth=356'),
+  ('Parkclaw™ 260 Knit', 'inov-8', 6, 'blue', 3399.00, 20, 'https://images.prodirectsport.com/ProductImages/Thumbs/253444_Thumb_1128284.jpg?impolicy=thumb&imwidth=356'),
+    /*new balance shoes*/
+  ('More Trail V2', 'new balance', 7, 'red', 2799.99, 10, 'https://images.prodirectsport.com/ProductImages/Thumbs/262785_Thumb_1283492.jpg?impolicy=thumb&imwidth=356'),
+  ('Super Comp Pacer', 'new balance', 8, 'white', 3875.00, 15, 'https://images.prodirectsport.com/ProductImages/Thumbs/274614_Thumb_1674432.jpg?impolicy=thumb&imwidth=356'),
+  ('FuelCell SuperComp Elite v3', 'new balance', 6, 'purple', 7999.00, 15, 'https://images.prodirectsport.com/ProductImages/Thumbs/288004_Thumb_1676997.jpg?impolicy=thumb&imwidth=356'),
+  ('Fresh Foam X Hierro v7', 'new balance', 6, 'orange', 3399.00, 20, 'https://images.prodirectsport.com/ProductImages/Thumbs/287991_thumb_1655131.jpg?impolicy=thumb&imwidth=356');
+

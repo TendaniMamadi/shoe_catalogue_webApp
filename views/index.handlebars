@@ -1,13 +1,261 @@
 <div class="shoeWrap">
-    <h1>Welcome to GetSet,Ready,Go</h1>
-    {{#each shoes}}
-    <div class="shoe-item">
-        <h2>{{brand}}</h2>
-        <span>Size: {{size}}</span>
-        <span>Colour: {{colour}}</span>
-        <span>Price: R{{price}}</span>
-        <span>{{#if in_stock}}In Stock{{else}}Out of Stock{{/if}}</span>
-        <img src="{{image_url}}" alt="{{brand}} Shoe">
+    <header>
+        <div class="nav">
+            <a href="#" class="logo">Welcome to GetSet,Ready,Go</a>
+
+            <!---cart icon-->
+            <i class='bx bx-cart' id="cart-icon" data-quantity="0"></i>
+            <!---cart-->
+            <div class="cart">
+                <h2 class="cart-title">Cart</h2>
+                <!---cart content-->
+                <div class="cart-content"></div>
+                <!---total-->
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">R0</div>
+                </div>
+                <!---buy button-->
+                <button type="button" class="btn-buy">Pay Now</button>
+            </div>
+        </div>
+
+    </header>
+    <div class="shoe-container">
+        <!-- Shoe Card 1 -->
+        <div class="shoe-card">
+            <img src="https://images.prodirectsport.com/ProductImages/Thumbs/1002372_Thumb_1644173.jpg" alt="Shoe 1">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 2 -->
+        <div class="shoe-card">
+            <img src="https://images.prodirectsport.com/ProductImages/Thumbs/4066766622937_3_1437619.jpg?impolicy=thumb&imwidth=356" alt="Shoe 2">
+            <h4>adidas 4D FWD 4 -  Ftwr White/Ftwr White/Core White</h4>
+            <p>Price: R3999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 3 -->
+        <div class="shoe-card">
+            <img src="shoe20.jpg" alt="Shoe 3">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">5</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 4 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 4">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 5 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 5">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 6 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 6">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 7 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 7">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 8 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 8">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 9 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 9">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 10 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 10">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 11 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 11">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 12 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 12">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 13 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 13">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 14 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 14">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 15 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 15">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 16-->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 16">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 17 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 17">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 18 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 18">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 19 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 19">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 20 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 20">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 21 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 21">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 22 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 22">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 23 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 23">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoe Card 24 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 24">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+         <!-- Shoe Card 25 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 25">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+         <!-- Shoe Card 26 -->
+        <div class="shoe-card">
+            <img src="shoe1.jpg" alt="Shoe 26">
+            <h4>Adidas 4D FWD 3 - Core Black/Core Black/Carbon</h4>
+            <p>Price: R4999.99</p>
+            <p>Availability: <span class="stock">10</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
     </div>
-    {{/each}}
 </div>
