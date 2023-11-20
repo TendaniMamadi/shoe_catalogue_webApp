@@ -1,3 +1,7 @@
 GET http://localhost:2026/api/shoes
 
 
+GET http://localhost:2026/api/shoes/brand/:brandname
+
+GET http://localhost:2026/api/shoes/color/:color
+

@@ -44,16 +44,3 @@ body {
     color: #4CAF50;
 }
 
-/*cart*/
-
-/* .cart {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 360px;
-    min-height: 100vh;
-    padding: 20px;
-    background-color:#4CAF50;
-    box-shadow: -2px 0 4px hsl(0, 4%, 15% / 10%);
-    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-} */

@@ -7,6 +7,9 @@ import pgPromise from 'pg-promise';
 import 'dotenv/config';
 import route from './route/routes.js';
 import db_queries from './services/db_queries.js';
+import shoe_catalogue from './API/shoe_catalogue.js'
+import cors from 'cors'
+import axios from 'axios';
 
 
 
@@ -16,11 +19,8 @@ const connectionString = process.env.DATABASE_URL;
 const pgp = pgPromise({});
 const db = pgp(connectionString);
 const backendInstance = db_queries(db);
-const routeInstance = route(backendInstance);
-
-
-
-
+const API_Instance = shoe_catalogue(backendInstance);
+const routeInstance = route(API_Instance);
 
 
 
@@ -41,6 +41,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(express.json());
+app.use(cors())
 
 //Routes
 app.get('/',(req,res)=>{
@@ -51,7 +52,6 @@ app.get("/api/shoes", routeInstance.allShoes);
 app.get('/api/shoes/brand/:brandname', routeInstance.allShoeBrandName);
 app.get('/api/shoes/size/:size', routeInstance.allSizes);
 app.get('/api/shoes/color/:color', routeInstance.allShoeColors);
-
 app.get('/api/shoes/brand/:brandname/size/:size',routeInstance.allShoeBrandNameAndSize);
 
 

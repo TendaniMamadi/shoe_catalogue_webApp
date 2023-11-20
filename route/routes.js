@@ -4,6 +4,8 @@ export default function routes(logic) {
         res.render('index');
     }
 
+
+    
     const allShoes = async (req, res) => {
         const allShoesData = await logic.getAllShoes();
         res.json(allShoesData);
