@@ -1,46 +1,128 @@
+/* public/styles.css */
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-
-.shoe-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+h1 {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
 }
 
-.shoe-card {
-    width: 200px;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: 10px;
-    text-align: center;
+form {
+  margin: 20px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
 }
 
-.shoe-card img {
-    max-width: 100%;
-    height: auto;
+label {
+  display: block;
+  margin-bottom: 5px;
 }
 
-.add-to-cart {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin-top: 10px;
-    cursor: pointer;
+input {
+  margin-bottom: 10px;
 }
 
-.stock {
-    font-weight: bold;
-    color: #4CAF50;
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
+button:hover {
+  background-color: #45a049;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px;
+}
+
+li {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #4caf50;
+}
+
+/* Center the collection container */
+.collection-container {
+  /* display: inline-block; */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Style for each collection item (card) */
+.collection {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  display: inline-block;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Style for the collection image */
+.collection_image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style for the collection details */
+.collection-details {
+  margin-top: 10px;
+}
+
+/* Style for the add-to-cart button */
+.add-to-cart-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Add some spacing between cards on smaller screens */
+@media (max-width: 600px) {
+  .collection {
+    width: 100%;
+  }
+}

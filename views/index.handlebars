@@ -1,13 +1,39 @@
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/signup">Signup</a></li>
+        <li><a href="/cart">Cart</a></li>
+    </ul>
+</nav>
+
+<h1>GetSet-Ready-Go</h1>
+<form action="/" method="post">
+    <label for="color">Color:</label>
+    <input type="text" name="color">
+    <label for="size">Size:</label>
+    <input type="number" name="size">
+    <label for="brand">Brand:</label>
+    <input type="text" name="brand">
+    <label for="inStock">In Stock:</label>
+    <input type="checkbox" name="inStock">
+    <button type="submit">Filter</button>
+</form>
 
 
-<div class="shoe-container">
-    {{#each shoes}}
-    <div class="shoe-card">
-        <img src="{{image}}" alt="{{name}}">
-        <h4>{{name}}</h4>
-        <p>Price: {{price}}</p>
-        <p>Availability: <span class="stock">{{availability}}</span></p>
-        <button class="add-to-cart">Add to Cart</button>
+<ul>
+    {{#each items}}
+    <div class="collection" name="shoeId" data-shoe-id="{{this.shoe_id}}">
+        <img src="{{this.image_url}}" alt="{{this.name}}" class="collection_image">
+        <div class="collection-details">
+            <h3 name="shoeName">{{this.brandname}} {{this.name}}</h3>
+            <p>R{{this.price}}</p>
+            <p>Size(s): {{size}}</p>
+            <p>Color(s): {{this.color}}</p>
+            <p>Instock: {{this.in_stock}}</p>
+        </div>
+        <button type="button submit" class="add-to-cart-btn" data-shoe-id="{{this.shoe_id}}">Add to cart</button>
     </div>
     {{/each}}
-</div>
+
+</ul>

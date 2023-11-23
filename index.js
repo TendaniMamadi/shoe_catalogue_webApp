@@ -5,7 +5,7 @@ import flash from 'express-flash';
 import session from 'express-session';
 import pgPromise from 'pg-promise';
 import 'dotenv/config';
-import route from './route/routes.js';
+//import route from './route/routes.js';
 import db_queries from './services/db_queries.js';
 import shoe_catalogue from './API/shoe_catalogue_API.js'
 import cors from 'cors'
@@ -20,7 +20,7 @@ const pgp = pgPromise({});
 const db = pgp(connectionString);
 const backendInstance = db_queries(db);
 const API_Instance = shoe_catalogue(backendInstance);
-const routeInstance = route(API_Instance);
+//const routeInstance = route(API_Instance);
 
 
 
@@ -44,14 +44,20 @@ app.use(express.json());
 app.use(cors())
 
 //Routes
-app.get('/',(req,res)=>{
-    res.render('index');
-});
-app.get("/shoes", API_Instance.showAllShoes);
-app.get('/api/shoes/brand/:brandname', API_Instance.filterShoeByBrandName);
-app.get('/api/shoes/size/:size', API_Instance.filterShoesBySize);
-app.get('/api/shoes/color/:color', API_Instance.filterShoeColors);
-app.get('/api/shoes/brand/:brandname/size/:size',API_Instance.filterShoeByBrandNameAndSize);
+app.get('/', async (req, res) => {
+    try {
+      const items = await db.any('SELECT * FROM shoes');
+      res.render('index', { items });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
+// app.get("/shoes", API_Instance.showAllShoes);
+// app.get('/api/shoes/brand/:brandname', API_Instance.filterShoeByBrandName);
+// app.get('/api/shoes/size/:size', API_Instance.filterShoesBySize);
+// app.get('/api/shoes/color/:color', API_Instance.filterShoeColors);
+// app.get('/api/shoes/brand/:brandname/size/:size',API_Instance.filterShoeByBrandNameAndSize);
 
 
 // app.post('/api/shoes/sold/:id',(req,res)=>{
