@@ -6,9 +6,16 @@ export default function routes(logic) {
 
 
     
-    const allShoes = async (req, res) => {
-        const allShoesData = await logic.getAllShoes();
-        res.json(allShoesData);
+    const allShoes = async (req, res,next) => {
+        try{
+
+            const allShoesData = await logic.getAllShoes();
+            res.render(allShoesData);
+        }
+        catch (err){
+            next(err);
+        }
+        
     }
 
 

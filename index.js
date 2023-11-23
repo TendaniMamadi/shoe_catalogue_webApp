@@ -7,7 +7,7 @@ import pgPromise from 'pg-promise';
 import 'dotenv/config';
 import route from './route/routes.js';
 import db_queries from './services/db_queries.js';
-import shoe_catalogue from './API/shoe_catalogue.js'
+import shoe_catalogue from './API/shoe_catalogue_API.js'
 import cors from 'cors'
 import axios from 'axios';
 
@@ -47,12 +47,26 @@ app.use(cors())
 app.get('/',(req,res)=>{
     res.render('index');
 });
+app.get("/shoes", API_Instance.showAllShoes);
+app.get('/api/shoes/brand/:brandname', API_Instance.filterShoeByBrandName);
+app.get('/api/shoes/size/:size', API_Instance.filterShoesBySize);
+app.get('/api/shoes/color/:color', API_Instance.filterShoeColors);
+app.get('/api/shoes/brand/:brandname/size/:size',API_Instance.filterShoeByBrandNameAndSize);
 
-app.get("/api/shoes", routeInstance.allShoes);
-app.get('/api/shoes/brand/:brandname', routeInstance.allShoeBrandName);
-app.get('/api/shoes/size/:size', routeInstance.allSizes);
-app.get('/api/shoes/color/:color', routeInstance.allShoeColors);
-app.get('/api/shoes/brand/:brandname/size/:size',routeInstance.allShoeBrandNameAndSize);
+
+// app.post('/api/shoes/sold/:id',(req,res)=>{
+
+// });
+// app.post('/api/shoes',(req,res)=>{
+
+// });
+
+//API instances
+app.get("/api/shoes", API_Instance.showAllShoes);
+app.get('/api/shoes/brand/:brandname', API_Instance.filterShoeByBrandName);
+app.get('/api/shoes/size/:size', API_Instance.filterShoesBySize);
+app.get('/api/shoes/color/:color', API_Instance.filterShoeColors);
+app.get('/api/shoes/brand/:brandname/size/:size',API_Instance.filterShoeByBrandNameAndSize);
 
 
 // app.post('/api/shoes/sold/:id',(req,res)=>{
