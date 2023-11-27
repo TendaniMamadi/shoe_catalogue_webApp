@@ -8,17 +8,29 @@
 </nav>
 
 <h1>GetSet-Ready-Go</h1>
-<form action="/" method="post">
+<form action="/filters" method="post">
     <label for="color">Color:</label>
-    <input type="text" name="color">
+    <select name="Color" id="">
+        <option value=""></option>
+        <option value="white">white</option>
+        <option value="black">black</option>
+        <option value="orange">orange</option>
+        <option value="pink">pink</option>
+        <option value="green">green</option>
+        <option value="red">red</option>
+        <option value="yellow">yellow</option>
+        <option value="blue">blue</option>
+        <option value="grey">grey</option>
+        <option value="purple">purple</option>
+    </select>
     <label for="size">Size:</label>
     <input type="number" name="size">
     <label for="brand">Brand:</label>
     <input type="text" name="brand">
-    <label for="inStock">In Stock:</label>
-    <input type="checkbox" name="inStock">
     <button type="submit">Filter</button>
 </form>
+
+
 
 
 <ul>
