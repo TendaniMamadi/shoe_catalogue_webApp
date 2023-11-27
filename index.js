@@ -1,5 +1,4 @@
 import express from 'express';
-import { engine } from 'express-handlebars';
 import bodyParser from 'body-parser';
 import flash from 'express-flash';
 import session from 'express-session';
@@ -20,11 +19,6 @@ const backendInstance = db_queries(db);
 const API_Instance = shoe_catalogue(backendInstance);
 
 
-
-app.engine('handlebars', engine({
-    layoutsDir: './views/layouts'
-}));
-
 app.use(session({
     secret: "shoe_catalogue",
     resave: false,
@@ -32,9 +26,6 @@ app.use(session({
 }));
 
 app.use(flash());
-app.set('view engine', 'handlebars');
-app.set('views', './views');
-app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.json());
